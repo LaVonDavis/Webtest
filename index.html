@@ -6,11 +6,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.23/addons/p5.dom.min.js"></script>
 <!-- included DOM addon library for adding various html elements -->
 <!-- paste all of this code into a text editor and saveas .html file. you're done! -->
-<script>
-function setup() {
-createCanvas(windowWidth, windowHeight);
-}
-</script>
 </head>
 
 <body>
@@ -24,7 +19,7 @@ var b;
 function setup() {
     initializeFields();
     rectMode(CENTER);
-    createCanvas(800, 800);
+createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
