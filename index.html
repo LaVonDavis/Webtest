@@ -1,1 +1,57 @@
 <h1>hello world</h1>
+<html>
+<head>
+<meta charset=utf-8>
+<title>HTML File Example</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.23/p5.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.23/addons/p5.dom.min.js"></script>
+<!-- included DOM addon library for adding various html elements -->
+<!-- paste all of this code into a text editor and saveas .html file. you're done! -->
+<script>
+function setup() {
+  createCanvas(720, 400);
+}
+</script>
+</head>
+
+<body>
+
+<script>
+
+var a;
+
+var b;
+
+function setup() {
+    initializeFields();
+    rectMode(CENTER);
+    createCanvas(800, 800);
+}
+
+function draw() {
+    point(a, b);
+    if (keyIsPressed === true && key === 'a') {
+        a = a - 1;
+    }
+    if (keyIsPressed === true && key === 'd') {
+        a = a + 1;
+    }
+    if (keyIsPressed === true && key === 'w') {
+        b = b - 1;
+    }
+    if (keyIsPressed === true && key === 's') {
+        b = b + 1;
+    }
+}
+
+function initializeFields() {
+    a = 1;
+    b = 1;
+}
+</script>
+
+
+
+ </body>
+
+ </html>
