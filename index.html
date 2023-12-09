@@ -12,29 +12,28 @@
 
 <script>
 
-var x;
-var y;
-var cw;
-var a;
-var b;
-var c1;
-var c2;
-var c3;
-var c2inc;
-var c3inc;
-var opc;
-var opc_inc;
+<html>
+<head>
+<meta charset=utf-8>
+<title>HTML File Example</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.23/p5.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.23/addons/p5.dom.min.js"></script>
+<!-- included DOM addon library for adding various html elements -->
+<!-- paste all of this code into a text editor and saveas .html file. you're done! -->
+</head>
+
+<body>
+
+<script>
 
 function setup() {
-    initializeFields();
+    createCanvas(windowWidth, windowHeight);
     rectMode(CENTER);
-createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  background(220);
-
-  noStroke();
+    background(220);
+    noStroke();
     x = mouseX;
     y = mouseY;
     cw = 10;
@@ -47,31 +46,24 @@ function draw() {
     opc_inc=opc/b;
     c2 = 0;
     c3 = 0;
-      for (let i = 0; i < b;i++){
-fill(c1, c2, c3, opc);
-circle(x, y, cw);
-          opc -= opc_inc;
-          c2 += c2inc;
-          c3 += c3inc;
-          cw += 2*a;
+    for (let i = 0; i < b;i++){
+        fill(c1, c2, c3, opc);
+        ellipse(x, y, cw, cw);
+        opc -= opc_inc;
+        c2 += c2inc;
+        c3 += c3inc;
+        cw += 2*a;
 }
 
 }
 
-function initializeFields() {
-    x = 1;
-    y = 1;
-    cw = 1;
-    a = 1;
-    b = 1;
-    c1 = 1;
-    c2inc = 1;
-    c3inc = 1;
-    opc = 255;
-    opc_inc=1;
-    c2 = 1;
-    c3 = 1;
-}
+</script>
+
+
+
+ </body>
+
+ </html>
 </script>
 
 
