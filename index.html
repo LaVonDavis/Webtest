@@ -32,27 +32,29 @@ function setup() {
 }
 
 function draw() {
-    background(220);
+    background(20);
     noStroke();
     x = mouseX;
     y = mouseY;
-    cw = 10;
-    a = 1.5;
+    cw = 150;
+    cw1 =   map(cw, 0, cw, 0, mouseY)
+    a = 3;
     b = 100;
     c1 = 255;
+    cw_inc = cw/b;
     c2inc = 255/b;
     c3inc = 255/b;
-    opc = 255;
-    opc_inc=opc/b;
+    opc = 0;
+    opc_inc=255/b;
     c2 = 0;
     c3 = 0;
-    for (let i = 0; i < b;i++){
+    for (let i = cw1; i > 0 ;i--){
         fill(c1, c2, c3, opc);
-        ellipse(x, y, cw, cw);
-        opc -= opc_inc;
-        c2 += c2inc;
-        c3 += c3inc;
-        cw += 2*a;
+        ellipse(x, y, i);
+        opc += opc_inc;
+        c2 -= c2inc;
+        c3 -= c3inc;
+
 }
 
 }
