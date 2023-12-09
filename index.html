@@ -24,14 +24,39 @@ createCanvas(windowWidth, windowHeight);
 
 function draw() {
   background(220);
-  fill(100, 0, 0);
+
   noStroke();
-  ellipse(mouseX, mouseY, 100, 100)
+    x = mouseX;;
+    y = mouseY
+    cw = 10;
+    a = 1.5
+    b = 100;
+    c1 = 255;
+    c2inc = 255/b
+    c3inc = 255/b
+    opc = 255;
+    opc_inc=opc/b
+    c2 = 0;
+    c3 = 0;
+      for (let i 0; i < b;i++){
+fill(c1, c2, c3, opc);
+circle(x, y, cw);
+          opc -= opc_inc
+          c2 += c2inc
+          c3 += c3inc
+          cw += 2*a;
+}
+
 }
 
 function initializeFields() {
-    a = 1;
-    b = 1;
+    x = 1;
+    y = 1;
+    cw = 1;
+    a = 1
+    c1 = 1;
+    c2 = 1;
+    c3 = 1;
 }
 </script>
 
